@@ -1,0 +1,47 @@
+{
+  "name": "iot-krasnodar-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "@ui5/webcomponents": "^1.0.0-rc.14",
+    "@ui5/webcomponents-fiori": "^1.0.0-rc.14",
+    "@ui5/webcomponents-icons": "^1.0.0-rc.14",
+    "@ui5/webcomponents-react": "^0.15.3",
+    "@ui5/webcomponents-react-charts": "^0.15.3",
+    "jest-environment-jsdom-sixteen": "^1.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-fetch-hook": "^1.8.5",
+    "react-scripts": "4.0.3",
+    "socket.io-client": "^4.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && (robocopy build ..\\krasnodar\\frontend /mir /s || echo .) ",
+    "test": "react-scripts test --env jest-environment-jsdom-sixteen",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!(@ui5|lit-html)).*\\.js$"
+    ]
+  }
+}
